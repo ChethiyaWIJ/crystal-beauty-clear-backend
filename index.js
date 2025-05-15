@@ -20,7 +20,7 @@ app.use(cors());
 
 mongoose.connect(process.env.MONGO_URL).then(
     ()=>{
-        console.log("Conected to the databaase");
+        console.log("Conected to the database");
     }
 ).catch(
     ()=>{
