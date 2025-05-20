@@ -23,6 +23,7 @@ export async function createProduct(req,res) {
             message : "Product saved successfully"
         })
     }catch(err){
+        console.log(err)
         res.status(500).json({
             message : "Product not saved"
         })
@@ -44,8 +45,8 @@ export async function createProduct(req,res) {
 }
 export function getProducts(req,res) {
         Product.find().then(
-            (prodcuts)=>{
-                res.json(prodcuts)
+            (products)=>{
+                res.json(products)
             }
         ).catch(
             (err)=>{
